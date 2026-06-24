@@ -11,37 +11,43 @@ body{
     justify-content:center;
     align-items:center;
     padding:20px;
-    background:linear-gradient(135deg,#667eea,#764ba2,#6b73ff);
-    background-size:300% 300%;
-    animation:bgMove 8s ease infinite;
+
+    background-image:url("img/1600w-B3btfnRZYhk.webp");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
 }
 
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
 }
 
 .container{
+    position:relative;
+    z-index:2;
     width:100%;
     max-width:420px;
 }
 
 .title{
     text-align:center;
-    color:white;
+    color:#fff;
     margin-bottom:20px;
-    font-size:2.2rem;
-    text-shadow:0 0 15px rgba(255,255,255,.6);
+    font-size:2.3rem;
+    font-weight:700;
+    text-shadow:0 0 20px rgba(255,255,255,.7);
 }
 
 .calculator{
-    width:100%;
     padding:20px;
     border-radius:25px;
     background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(20px);
-    box-shadow:0 8px 32px rgba(0,0,0,.25);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 8px 32px rgba(0,0,0,0.4);
 }
 
 #display{
@@ -54,8 +60,8 @@ body{
     text-align:right;
     font-size:2rem;
     color:white;
-    background:rgba(255,255,255,.08);
-    margin-bottom:20px;
+    background:rgba(255,255,255,0.1);
+    margin-bottom:15px;
 }
 
 #display::placeholder{
@@ -74,18 +80,24 @@ button{
     border-radius:15px;
     font-size:1.2rem;
     font-weight:600;
-    cursor:pointer;
     color:white;
-    background:rgba(255,255,255,.12);
-    transition:0.3s;
+    cursor:pointer;
+    background:rgba(255,255,255,0.12);
+    transition:all .3s ease;
 }
 
 button:hover{
     transform:translateY(-3px);
+    background:rgba(255,255,255,0.2);
 }
 
 button:active{
-    transform:scale(0.95);
+    transform:scale(.95);
+}
+
+.special{
+    background:linear-gradient(135deg,#00c9ff,#92fe9d);
+    color:#111;
 }
 
 .operator{
